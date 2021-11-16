@@ -46,11 +46,33 @@
 <div>
 	<input type="text" id="text" value="确定叡" onkeyup="draw()" autofocus="">
 	<button onclick="draw()" id="btn">确定</button>
+
+    <input type="text" id="text1" value="确定叡" onkeyup="draw()" autofocus="">
+	<button onclick="draw1()" id="btn">确定</button>
+
+    <input type="text" id="text2" value="确定叡" onkeyup="draw()" autofocus="">
+	<button onclick="draw2()" id="btn">确定</button>
+
+
+
 </div>
 <script>
   function draw(){
 		var txt = liff.getOS();
 		text.value  = txt;
+    }
+    function draw1(){
+		var txt = liff.getProfile();
+		text1.value  = txt;
+    }
+    function draw2(){
+		liff.sendMessages([
+          {
+            type: 'text',
+            text: '幹',
+          }
+        ]);
+		
     }
 </script>
 </body>
