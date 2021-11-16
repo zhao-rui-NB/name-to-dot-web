@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<script charset="utf-8" src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
+<style>
+	#wrap{
+		position: relative;
+		height: 10px;
+		width: 200px;
+	}
+	#wrap span{
+		position: absolute;
+		width: 0px;
+		height: 0px;
+		border: 2px solid #000;
+	}
+</style>
+
+
+
+<script>
+    liff
+  .init({
+    liffId: "123456-abcedfg" // Use own liffId
+  })
+  .then(() => {
+    
+  })
+  .catch((err) => {
+    // Error happens during initialization
+    console.log(err.code, err.message);
+  });
+
+
+</script>
+
+
+
+
+</head>
+
+
+<body>
+<div id="wrap"></div>
+<div>
+	<input type="text" id="text" value="确定叡" onkeyup="draw()" autofocus="">
+	<button onclick="draw()" id="btn">确定</button>
+</div>
+<script>
+  function draw(){
+		var txt = liff.getOS();
+		text.value  = txt;
+    }
+</script>
+</body>
+</html>
